@@ -1,18 +1,22 @@
 {
   "name": "panopticon",
   "version": "0.0.1",
-  "description": "A tool to track your digital footprint",
+  "description": "A standalone tool to visualise your digital footprint",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cow-co/panopticon.git"
   },
-  "author": "",
-  "license": "ISC",
+  "build": {
+    "appId": "panopticon"
+  },
+  "author": "cow-co",
   "bugs": {
     "url": "https://github.com/cow-co/panopticon/issues"
   },
