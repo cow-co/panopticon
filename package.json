@@ -6,15 +6,38 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "electron-start": "npm run build && electron .",
+    "postinstall": "electron-builder install-app-deps && electron-rebuild",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "release": "electron-builder -c.extraMetadata.main=build/electron.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cow-co/panopticon.git"
   },
   "build": {
-    "appId": "panopticon"
+    "productName": "PANOPTICON",
+    "appId": "panopticonS",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "publish": [
+        "github"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "publish": [
+        "github"
+      ]
+    }
   },
   "author": "cow-co",
   "bugs": {
