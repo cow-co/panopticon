@@ -1,23 +1,52 @@
 {
   "name": "panopticon",
   "version": "0.0.1",
-  "description": "A tool to track your digital footprint",
+  "description": "A standalone tool to visualise your digital footprint",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "test": "echo \"no test specified\"",
+    "start": "electron .",
+    "electron-start": "npm run build && electron .",
+    "postinstall": "electron-builder install-app-deps && electron-rebuild",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "release": "electron-builder -c.extraMetadata.main=build/electron.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cow-co/panopticon.git"
   },
-  "author": "",
-  "license": "ISC",
+  "build": {
+    "productName": "PANOPTICON",
+    "appId": "panopticonS",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "publish": [
+        "github"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "publish": [
+        "github"
+      ]
+    }
+  },
+  "author": "cow-co",
   "bugs": {
     "url": "https://github.com/cow-co/panopticon/issues"
   },
   "homepage": "https://github.com/cow-co/panopticon#readme",
   "devDependencies": {
-    "electron": "^13.1.7"
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7",
+    "electron-rebuild": "^2.3.5"
   }
 }
