@@ -9,8 +9,8 @@
     "electron-start": "npm run build && electron .",
     "postinstall": "electron-builder install-app-deps && electron-rebuild",
     "preelectron-pack": "npm run build",
-    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
-    "release": "electron-builder -c.extraMetadata.main=build/electron.js"
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/main.js",
+    "release": "electron-builder -c.extraMetadata.main=build/main.js"
   },
   "repository": {
     "type": "git",
