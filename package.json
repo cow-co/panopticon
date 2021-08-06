@@ -21,7 +21,7 @@
   },
   "build": {
     "productName": "PANOPTICON",
-    "appId": "panopticonS",
+    "appId": "panopticon",
     "files": [
       "build/**/*",
       "node_modules/**/*"
