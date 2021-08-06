@@ -11,7 +11,6 @@
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "release": "electron-builder",
     "start": "npm run build && electron .",
     "test": "echo \"no test specified\""
   },
