@@ -14,7 +14,7 @@ notifications:
 
 deploy:
   provider: script
-  script: npm run electron-pack
+  script: npm run electron:build
   skip_cleanup: true
   on:
     branch: main
