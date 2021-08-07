@@ -2,7 +2,7 @@
   "name": "panopticon",
   "version": "0.0.1",
   "private": true,
-  "author": "cow-co",
+  "author": "cow-co <cow-co@users.noreply.github.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
