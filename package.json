@@ -16,7 +16,7 @@
   },
   "main": "background.js",
   "dependencies": {
-    "core-js": "^3.19.0",
+    "core-js": "^3.19.1",
     "vue-router": "^4.0.11",
     "vue": "^3.2.20"
   },
