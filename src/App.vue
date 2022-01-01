@@ -6,6 +6,16 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      entities: []
+    }
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

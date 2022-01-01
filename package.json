@@ -14,7 +14,7 @@
     "start": "npm run build && electron .",
     "test": "echo \"no test specified\""
   },
-  "main": "background.js",
+  "main": "main.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "uuid": "^8.3.2",
