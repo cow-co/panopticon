@@ -7,7 +7,7 @@ class VisualisationPanel extends Component {
     this.state = {
       page: 1
     };
-    this.handlePageChange = handlePageChange.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
   }
 
   handlePageChange(event, value) {
