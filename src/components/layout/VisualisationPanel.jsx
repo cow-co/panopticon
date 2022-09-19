@@ -4,6 +4,7 @@ import Pagination from '@mui/material/Pagination';
 
 class VisualisationPanel extends Component {
   constructor() {
+    super();
     this.state = {
       page: 1
     };
