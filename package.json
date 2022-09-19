@@ -49,7 +49,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha",
     "eject": "react-scripts eject",
     "electron-start": "npm run build && electron .",
     "postinstall": "electron-builder install-app-deps && electron-rebuild",
