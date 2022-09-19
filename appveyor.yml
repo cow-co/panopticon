@@ -3,7 +3,7 @@ platform:
 
 branches:
   only:
-    - master
+    - main
 install:
   - ps: Install-Product node Current x64
   - npm install npm@latest -g
