@@ -1,0 +1,78 @@
+{
+  "name": "panopticon",
+  "version": "0.1.0",
+  "main": "public/electron.js",
+  "private": true,
+  "homepage": "./",
+  "build": {
+    "productName": "PANOPTICON",
+    "appId": "Panopticon",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "publish": [
+        "github"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "publish": [
+        "github"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^20.1.4",
+    "electron-builder": "^23.3.3",
+    "electron-rebuild": "^3.2.9",
+    "install": "^0.13.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha",
+    "eject": "react-scripts eject",
+    "electron-start": "npm run build && electron .",
+    "postinstall": "electron-builder install-app-deps && electron-rebuild",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder -c.extraMetadata.main=build/electron.js",
+    "release": "electron-builder -c.extraMetadata.main=build/electron.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "snyk": true
+}
