@@ -9,7 +9,5 @@ install:
   - npm install npm@latest -g
   - npm install -g electron-builder
   - npm install
-test_script:
-  - npm run test
 build_script:
   - npm run electron-pack

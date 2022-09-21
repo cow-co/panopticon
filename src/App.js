@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./App.css";
+import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Header from "./components/layout/Header";
+import VisualisationPanel from "./components/layout/VisualisationPanel";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <ThemeProvider theme={darkTheme}>
+          <CssBaseline />
+          <Header />
+          <Container maxWidth="sm">
+            <h1>PANOPTICON</h1>
+            <VisualisationPanel />
+          </Container>
+        </ThemeProvider>
+      </div>
+    );
+  }
 }
 
 export default App;
