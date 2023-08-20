@@ -36,7 +36,7 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "@mui/material": "^5.10.6",
+    "@mui/material": "^5.14.2",
     "@mui/icons-material": "^5.10.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
